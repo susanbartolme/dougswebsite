@@ -1,0 +1,357 @@
+body {
+	font-family:"Roboto",Helvetica,sans-serif;
+	background-color:#EEEEEE;
+	font-size:18px;
+	color:#4A4A4A;
+}
+
+a[href*="tel://"] {
+	text-decoration:none;
+	color:#4A4A4A;
+}
+
+#maincontent_wrapper {
+	/*no real difference between relative and static, except that relative allows you to float things*/
+	position:relative;
+}
+
+header, #maincontent_wrapper, footer {
+	max-width:1440px;
+	/*automatically centers these containers on the screen*/
+	margin:0 auto;
+}
+
+header {
+	height:74px;
+	width:100%;
+	background-color:#EEEEEE;
+	margin-bottom:20px;
+	/* relative to the DOM. in this case, it's at the top of our document, so it's at the top of the browser page */
+	position: relative;
+}
+
+header img {
+	height:70px;
+	margin-top:7px;
+	display: block;
+	margin:auto;
+}
+
+
+aside {
+	float:left;
+	width:20%;
+	/*what's the correct way to asign limitless height here?*/
+	/*float left for aside, float right for content, clear both for footer*/
+}
+
+nav, nav a {
+	text-decoration:none;
+	color:#4A4A4A;
+}
+
+nav#secondary {
+	width:75%;
+	margin:0 auto;
+	padding:0px 30px 30px 50px;
+}
+
+nav#secondary ul {
+	list-style: none;
+	padding:0px;
+	margin-top:-13px;
+}
+
+nav#secondary ul li{
+	text-align:left;
+	line-height: 50px;
+}
+
+.active {
+	color:#89B996;
+	border-bottom:2px solid #89B996;
+	padding-bottom: 2px;
+}
+
+.tab_sound {
+	display:none;
+}
+
+#content {
+	width:50%;
+	margin:auto;
+	max-width:1080px;
+	/*maintains width of container regardless of changes to padding and borders*/
+	box-sizing: border-box;
+}
+
+.music_entry {
+	position:relative;
+	margin-bottom:20px;
+	box-sizing: border-box;
+}
+
+.sound_description {
+	text-align: center;
+	overflow:scroll;
+	padding:0px;
+}
+
+.sound_description h1 {
+	font-size:1em;
+	margin-bottom:5px;
+}
+
+.sound_description p {
+	font-size:0.7em;
+	margin-top:0px;
+}
+
+.sound_content {
+	height:230px;
+}
+
+.sound_content iframe {
+	width:100%;
+	height:100%;
+}
+
+.clearfix {
+	width:100%;
+	height:84px;
+}
+
+/*saw somewhere that if I wrapped the content in a div i could set use relative/absolute positioning 
+/*#contactpage_wrapper{
+	width:100%;
+	height:85%;
+	position:relative;
+}*/
+
+#contact_page {
+	background-color:#ffffff;
+	display:none;
+	position:fixed;
+	bottom:0;
+	height:90%;
+}
+
+.bio_pic {
+	border:20px solid #ffffff;
+	width:50%;
+	overflow:hidden;
+	margin:0 auto;
+	background-position: center center;
+	background-size: cover;
+}
+
+.bio_pic img {
+	display:block;
+	margin: 0 auto;
+	border-radius:5px;
+}
+
+.bio_description {
+	width:50%;
+	height:300px;
+	margin:0 auto;
+	overflow-y:scroll;
+}
+
+.bio_description p {
+	font-size:0.7em;
+	text-align:justify;
+}
+
+.bio_description p:first-child {
+	font-size:0.85em;
+}
+
+.close_button {
+	font-size:30px;
+	text-align: center;
+	width:35px;
+	height:35px;
+	position:absolute;
+	top:0;
+	right:0;
+	background-color:#ffffff;
+	cursor: pointer;
+}
+
+footer {
+	clear:both;
+	position:fixed;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	background-color:#FFFFFF;
+	height:84px;
+	width:100%;
+}
+
+footer:hover {
+	border:2px solid #89B996;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+#col-1 {
+	width:77%;
+	height:80px;
+	float:left;
+}
+
+footer .contact {
+	float:left;
+	height:84px;
+	width:600px;
+	margin-left:50px;
+	padding-top:10px;
+	box-sizing: border-box;
+}
+
+footer .contact p:first-of-type {
+	display:inline;
+}
+
+footer .contact div {
+	float:left;
+}
+
+footer .contact h1 {
+	display:inline;
+	margin:19px 0px;
+	font-size:1.6em;
+}
+
+footer .contact p {
+	font-size:0.7em;
+	font-weight:normal;
+	width:203px;
+	text-align:left;
+} 
+
+footer ul {
+	list-style: none;
+	padding:0px;
+	float:right;
+	margin-right:15px;
+}
+
+footer ul li {
+	display:inline;
+	margin-left:15px;
+}
+
+footer ul li img {
+	width: 28px;
+}
+
+footer ul li img:hover {
+	opacity:0.5;
+	background-color:#89B996;
+}
+
+@media (max-width: 1036px) {
+	nav#secondary ul li a {
+		font-size:0.83em;
+	}
+}
+
+
+@media (max-width: 860px) {
+
+	aside {
+		float:none;
+		background-color:yellow;
+		width:100%;
+	}
+
+	nav#secondary {
+		width:100%;
+		padding:0px;
+	}
+
+	nav#secondary ul {
+		background-color:white;
+		margin:0px;
+	}
+
+	nav#secondary ul li {
+		display:inline;
+		margin-right: 15px;
+		margin-left: 20%;
+	}
+
+	nav#secondary ul li a {
+		font-size:inherit;
+	}
+
+	nav#secondary a span {
+		display:none;
+	}
+
+	#content {
+		width:100%;
+	}
+
+	.sound_content {
+		width:100%;
+		float:none;
+	}
+
+	.sound_description {
+		width:100%;
+		height:initial;
+	}
+
+	.close_button {
+		top:-35px;
+	}
+
+	.bio_pic {
+		width:90%;
+	}
+
+	.bio_description {
+		width:90%;
+		height:27%;
+	}
+
+	footer {
+		height:64px;
+	}
+
+	footer .contact {
+		width:100%;
+		height:64px;
+		margin-left:5px;
+	}
+
+	footer .contact p {
+		margin-top:-8px;
+	}
+
+	footer .contact > p {
+		margin-top:5px;
+	}
+
+	footer #social {
+		position:absolute;
+		top:-35px;
+		/*left:calc(50% - 92px);*/
+		background-color:#ffffff;
+		width:100%;
+	}
+
+	footer #social ul {
+		margin:auto 0;
+	}
+
+	footer .contact h1 {
+		font-size:1.3em;
+	}
+
+
+
